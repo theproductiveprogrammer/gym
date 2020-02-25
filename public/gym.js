@@ -380,6 +380,8 @@ function countDown(store) {
     let left = state.endtime - Date.now()
     if(left < 0) {
       let e = getNextExercise(state.selected)
+      let a = document.getElementById('chime')
+      a.play()
       store.dispatch({ type: 'timerdone', e})
     } else {
       store.dispatch({ type: 'timeleft', left })
