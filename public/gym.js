@@ -372,7 +372,7 @@ function countDown(store) {
   let state = store.getState()
   if(!state.endtime) return
 
-  window.requestAnimationFrame(() => step_1(store))
+  setTimeout(() => step_1(store), 500)
 
   function step_1(store) {
     let state = store.getState()
@@ -385,7 +385,7 @@ function countDown(store) {
       store.dispatch({ type: 'timerdone', e})
     } else {
       store.dispatch({ type: 'timeleft', left })
-      window.requestAnimationFrame(() => step_1(store))
+      setTimeout(() => step_1(store), 500)
     }
   }
 }
