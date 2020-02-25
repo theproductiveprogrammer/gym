@@ -105,7 +105,6 @@ function reducer(state, action) {
       let secs = state.selected.dataset.time.split(':')
       secs = secs[0]*60 + secs[1] * 1
       let end = Date.now() + secs * 1000 + 1000
-      end = Date.now() + secs * 30
       return { ...state, started: true, endtime: end }
     } else {
       return { ...state, started: true }
