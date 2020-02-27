@@ -147,6 +147,9 @@ function showToolbar(store, state, oldstate, toolbar) {
   let cont = div( { class: 'btn-cont'} )
   toolbar.appendChild(cont)
   update_btn_1()
+  let ex = div({ class: 'current-exercise' })
+  toolbar.appendChild(ex)
+  update_ex_1()
   let timer = div({ class: 'timer' })
   toolbar.appendChild(timer)
 
@@ -154,11 +157,20 @@ function showToolbar(store, state, oldstate, toolbar) {
     if(oldstate.started == state.started &&
         oldstate.selected == state.selected) return
     update_btn_1()
+    update_ex_1()
   })
 
   store.subscribe((state, oldstate) => {
     update_timer_1()
   })
+
+  function update_ex_1() {
+    ex.innerHTML = ""
+    let state = store.getState()
+    if(!state.selected) return
+    let txt = state.selected.children[0].innerText
+    ex.innerHTML = txt
+  }
 
   function update_btn_1() {
     cont.innerHTML = ""
