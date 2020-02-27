@@ -168,8 +168,18 @@ function showToolbar(store, state, oldstate, toolbar) {
     ex.innerHTML = ""
     let state = store.getState()
     if(!state.selected) return
-    let txt = state.selected.children[0].innerText
-    ex.innerHTML = txt
+    let txt = state.selected.getElementsByClassName('txt')
+    if(txt && txt.length) txt = txt[0].innerText
+    else txt = ""
+    let reps = state.selected.getElementsByClassName('reps')
+    if(reps && reps.length) reps = reps[0].innerText
+    else reps = ""
+    let weight = state.selected.getElementsByClassName('weight')
+    if(weight && weight.length) weight = weight[0].innerText
+    else weight = ""
+    ex.appendChild(div({ class: 'txt' }, txt))
+    ex.appendChild(div({ class: 'reps' }, reps))
+    ex.appendChild(div({ class: 'weight' }, weight))
   }
 
   function update_btn_1() {
