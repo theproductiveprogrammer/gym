@@ -1,207 +1,203 @@
--- Workout Day 1
+-- Bodyweight Workout
 # Warm Up
-2:45 Jumping Jacks
-0:15 Rest
-2:45 Shoulder Swings
-0:15 Rest
-2:45 Skipping
-0:15 Rest
-2:45 Shoulder Claps
-0:15 Rest
-1:30 Reverse Shoulder Swings
-0:15 Rest
-1:30 Toe Touch
-0:15 Rest
-2:45 Butt Kick
+5 Standing Shoulder Rolls
+15 Table Top Shoulder Rolls
+15 Table Top Shoulder Rolls (Reversed)
+15 Table Top Shoulder Shrugs
+15 Cat Camel
+15 Shoulder Stretches
+# Wrist Warm Up
+15 Palm Push Ups
+15 Finger Push Ups
+15 Side-to-Side
+15 Upside Down Leans
+15 Upside Down Elbow Rolls
+15 Elbow Rolls
+15 Sit Backs
+15 Lean Forwards
+
+# Plank
+3:20 Straight Plank
+1:20 Side Plank (L)
+1:20 Side Plank (R)
+0:30 Deadbug
+1:20 Bridge
+1:20 Leaning Plank
+0:30 Weighted Plank x25
+1:20 Hollow Hold
+
+3:00 Rest
+
+# Front Lever
+10 Toe Touch
+10 L-Sit Raises
+0:20 L-Sit Hold
+10 High Knee Raises
+10 High Knee Sides
+10 Front Lever Raise
+
+3:00 Rest
+
+# Squat
+15 Box Jump
+5 Pistol Squat (L)
+5 Pistol Squat (R)
+10 Calf Jump
+1:00 Rest
+15 Box Jump
+5 Pistol Squat (L)
+5 Pistol Squat (R)
+10 Calf Jump
+
+# Animals
+2:00 Bear Crawl
+0:30 Rest
+2:00 Frogger
+0:30 Rest
+2:00 Monkey Side to Side
+0:30 Rest
+2:00 Deep Squat to Handstand
 
 5:00 Setup
 
-# Bench Press Warm Up
-15 Bench Press x0
-15 Bench Press x5
-15 Bench Press x5
-6 Bench Press x25
-4 Bench Press x30
-# Bench Press
-6 Bench Press x27.5
+# Pull Up Routine
+5 Wide Grip Pullup x20
+5 Pullup x20
+5 Narrow Grip Pullup x20
+0:30 Rest
+5 Jumping Wide Grip Pullup x20
+5 Jumping Pullup x20
+5 Jumping Narrow Grip Pullup x20
+0:30 Rest
+5 Dip Depression x20
+0:30 Rest
+5 Dips x20
+0:30 Rest
+15 Wide Push Ups
+0:30 Rest
+15 Push Ups
+0:30 Rest
+15 Rolling Push Ups
+
 3:00 Rest
-6 Bench Press x27.5
+
+5 Wide Grip Pullup x15
+5 Pullup x15
+5 Narrow Grip Pullup x15
+0:30 Rest
+5 Jumping Wide Grip Pullup x15
+5 Jumping Pullup x15
+5 Jumping Narrow Grip Pullup x15
+0:30 Rest
+5 Dip Depression x20
+0:30 Rest
+5 Dips x15
+0:30 Rest
+15 Wide Push Ups
+0:30 Rest
+15 Push Ups
+0:30 Rest
+15 Rolling Push Ups
+
 3:00 Rest
-6 Bench Press x27.5
+5 Wide Grip Pullup x10
+5 Pullup x10
+5 Narrow Grip Pullup x10
+0:30 Rest
+5 Jumping Wide Grip Pullup x10
+5 Jumping Pullup x10
+5 Jumping Narrow Grip Pullup x10
+0:30 Rest
+5 Dip Depression x20
+0:30 Rest
+5 Dips x10
+0:30 Rest
+15 Wide Push Ups
+0:30 Rest
+15 Push Ups
+0:30 Rest
+15 Rolling Push Ups
+
 3:00 Rest
-# Bench Press Tricon
-0:30 Bench Press Explode x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-3:00 Rest
-0:30 Bench Press Explode x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-3:00 Rest
-0:30 Bench Press Explode x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
+5 Wide Grip Pullup
+5 Pullup
+5 Narrow Grip Pullup
+0:30 Rest
+5 Jumping Wide Grip Pullup
+5 Jumping Pullup
+5 Jumping Narrow Grip Pullup
+0:30 Rest
+5 Dips
+
 
 5:00 Setup
 
-# Bent Over Row Warmup
-15 Bent Over Row x0
-15 Bent Over Row x5
-15 Bent Over Row x5
-6 Bent Over Row x15
-4 Bent Over Row x25
-# Bent Over Row
-6 Bent Over Row x20
-3:00 Rest
-6 Bent Over Row x20
-3:00 Rest
-6 Bent Over Row x20
-3:00 Rest
-# Bent Over Row Tricon
-0:30 Bent Over Row Explode x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-3:00 Rest
-0:30 Bent Over Row Explode x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-3:00 Rest
-0:30 Bent Over Row Explode x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
+# Core Abs
+5 Table Top Sucks
+0:30 Rest
+15 Core Rollouts
+0:30 Rest
+5 Dragon Flag
+0:30 Rest
+15 Anti-Extension
+0:30 Rest
+0:15 L-Sit Hold
+1:30 Rest
+5 Table Top Sucks
+0:30 Rest
+15 Core Rollouts
+0:30 Rest
+5 Dragon Flag
+0:30 Rest
+15 Anti-Extension
+0:30 Rest
+10 L-Sit Hold Raises
+1:30 Rest
+5 Table Top Sucks
+0:30 Rest
+15 Core Rollouts
+0:30 Rest
+5 Dragon Flag
+0:30 Rest
+15 Anti-Extension
+0:30 Rest
+5 L-Sit Walks
+1:30 Rest
 
-5:00 Setup
+# Biceps
+6 Commando One Arm Negatives (L)
+6 Commando One Arm Negatives (R)
+0:30 Rest
+10 Ring Curls
+0:30 Rest
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:02 Setup
+0:05 One Arm Chinup Hold (L)
+0:05 Setup
+0:05 One Arm Chinup Hold (R)
+0:30 Rest
+8 Behind Head Chin Ups
+0:30 Rest
+12 Head Bangers
 
-# Incline Dumbell Press Warmup
-15 Incline Dumbell Press x10
-15 Incline Dumbell Press x16
-6 Incline Dumbell Press x20
-# Incline Dumbell Press
-9 Incline Dumbell Press x26
-1:00 Rest
-9 Incline Dumbell Press x26
-1:00 Rest
-9 Incline Dumbell Press x26
-1:00 Rest
-# Incline Dumbell Press Tricon
-0:30 Incline Dumbell Press Explode x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-3:00 Rest
-0:30 Incline Dumbell Press Explode x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-3:00 Rest
-0:30 Incline Dumbell Press Explode x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-
-5:00 Setup
-
-# Lat Pulldown Warmup
-15 Lat Pulldown x25
-15 Lat Pulldown x40
-6 Lat Pulldown x70
-# Lat Pulldown
-9 Lat Pulldown x75
-1:00 Rest
-9 Lat Pulldown x75
-1:00 Rest
-9 Lat Pulldown x75
-1:00 Rest
-# Lat Pulldown Tricon
-0:30 Lat Pulldown Explode x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-3:00 Rest
-0:30 Lat Pulldown Explode x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-3:00 Rest
-0:30 Lat Pulldown Explode x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
+# Clean and Press
+3 Clean and Press Hold Practice
