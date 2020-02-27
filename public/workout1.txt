@@ -19,7 +19,7 @@
 # Bench Press Warm Up
 15 Bench Press x0
 15 Bench Press x5
-15 Bench Press x5
+15 Bench Press x10
 6 Bench Press x25
 4 Bench Press x30
 # Bench Press
@@ -30,45 +30,45 @@
 6 Bench Press x27.5
 3:00 Rest
 # Bench Press Tricon
-0:30 Bench Press Explode x10
+0:10 Bench Press Explode x10
 0:10 Bench Press Hold x10
 0:10 Bench Press Hold x10
 0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+3:00 Rest
+0:10 Bench Press Explode x10
+0:10 Bench Press Hold x10
+0:10 Bench Press Hold x10
+0:10 Bench Press Hold x10
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
 3:00 Rest
 0:30 Bench Press Explode x10
 0:10 Bench Press Hold x10
 0:10 Bench Press Hold x10
 0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-3:00 Rest
-0:30 Bench Press Explode x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:10 Bench Press Hold x10
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
-0:30 Bench Press Up
-0:30 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
+0:10 Bench Press Up
+0:10 Bench Press Down
 
 5:00 Setup
 
 # Bent Over Row Warmup
 15 Bent Over Row x0
 15 Bent Over Row x5
-15 Bent Over Row x5
+15 Bent Over Row x10
 6 Bent Over Row x15
 4 Bent Over Row x25
 # Bent Over Row
@@ -79,38 +79,38 @@
 6 Bent Over Row x20
 3:00 Rest
 # Bent Over Row Tricon
-0:30 Bent Over Row Explode x10
+0:10 Bent Over Row Explode x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
 3:00 Rest
-0:30 Bent Over Row Explode x10
+0:10 Bent Over Row Explode x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
 3:00 Rest
-0:30 Bent Over Row Explode x10
+0:10 Bent Over Row Explode x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
 0:10 Bent Over Row Hold x10
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
-0:30 Bent Over Row Up
-0:30 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
+0:10 Bent Over Row Up
+0:10 Bent Over Row Down
 
 5:00 Setup
 
@@ -126,38 +126,38 @@
 9 Incline Dumbell Press x26
 1:00 Rest
 # Incline Dumbell Press Tricon
-0:30 Incline Dumbell Press Explode x10
+0:10 Incline Dumbell Press Explode x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
 3:00 Rest
-0:30 Incline Dumbell Press Explode x10
+0:10 Incline Dumbell Press Explode x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
 3:00 Rest
-0:30 Incline Dumbell Press Explode x10
+0:10 Incline Dumbell Press Explode x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
 0:10 Incline Dumbell Press Hold x10
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
-0:30 Incline Dumbell Press Up
-0:30 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
+0:10 Incline Dumbell Press Up
+0:10 Incline Dumbell Press Down
 
 5:00 Setup
 
@@ -173,35 +173,35 @@
 9 Lat Pulldown x75
 1:00 Rest
 # Lat Pulldown Tricon
-0:30 Lat Pulldown Explode x25
+0:10 Lat Pulldown Explode x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
 3:00 Rest
-0:30 Lat Pulldown Explode x25
+0:10 Lat Pulldown Explode x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
 3:00 Rest
-0:30 Lat Pulldown Explode x25
+0:10 Lat Pulldown Explode x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
 0:10 Lat Pulldown Hold x25
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
-0:30 Lat Pulldown Up
-0:30 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
+0:10 Lat Pulldown Up
+0:10 Lat Pulldown Down
