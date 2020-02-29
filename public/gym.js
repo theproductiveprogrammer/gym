@@ -70,6 +70,11 @@ function gym_init(e) {
 }
 
 const initialState = {
+  schedule: [],
+  selected: -1,
+  started: false,
+  timeleft: 0,
+  endtime: 0,
 }
 
 function reducer(state, action) {
@@ -81,13 +86,13 @@ function reducer(state, action) {
       return { ...state, schedule: action.schedule }
     case 'select':
       if(state.endtime) return state
-      return { ...state, started: false, selected: action.e }
+      return { ...state, started: false, selected: action.ndx }
     case 'startexercise':
       return start_exercise_1(state)
     case 'timeleft':
       return { ...state, timeleft: action.left }
     case 'timerdone':
-      state = { ...state, started: false, selected: action.e }
+      state = { ...state, started: false, selected: action.ndx }
       delete state.timeleft
       delete state.endtime
       return start_exercise_1(state)
@@ -100,9 +105,9 @@ function reducer(state, action) {
   }
 
   function start_exercise_1(state) {
-    if(!state.selected) return
-    if(state.selected.dataset.time) {
-      let secs = state.selected.dataset.time.split(':')
+    let exercise = state.schedule[state.selected]
+    if(exercise.time) {
+      let secs = exercise.time.split(':')
       secs = secs[0]*60 + secs[1] * 1
       let end = Date.now() + secs * 1000 + 1000
       return { ...state, started: true, endtime: end }
@@ -113,12 +118,22 @@ function reducer(state, action) {
 }
 
 function show(store, e) {
+  let statusbar = div({ class: 'statusbar' })
+  let titlebar = div({ class: 'titlebar' })
   let toolbar = div({ class: 'toolbar' })
   let schedule = div({ class: 'schedule' })
   let err = div({ class: 'err' })
+  e.appendChild(statusbar)
+  e.appendChild(titlebar)
   e.appendChild(toolbar)
   e.appendChild(schedule)
   e.appendChild(err)
+
+  showStatusbar(store, statusbar)
+
+  store.subscribe((state, oldstate) => {
+    showTitlebar(store, state, oldstate, titlebar)
+  })
 
   store.subscribe((state, oldstate) => {
     showToolbar(store, state, oldstate, toolbar)
@@ -140,9 +155,85 @@ function show(store, e) {
   })
 }
 
+function showTitlebar(store, state, oldstate, titlebar) {
+  if(state.schedule == oldstate.schedule &&
+      state.selected == oldstate.selected) return
+  let workout = ""
+  let title = ""
+  let i = state.selected
+  if(i == -1) i = 0
+  for(;i >=0;i--) {
+    let curr = state.schedule[i]
+    if(curr.type == 'workout' && !workout) workout = curr.txt
+    if(curr.type == 'title' && !title) title = curr.txt
+  }
+  if(title && workout) titlebar.innerHTML = `${title} / ${workout}`
+  else if(title) titlebar.innerHTML = title
+  else if(workout) titlebar.innerHTML = workout
+}
+
+function showStatusbar(store, statusbar) {
+  let stopwatch = h('span', { class: 'stopwatch' })
+  statusbar.append(stopwatch)
+
+  let img = h('img', { src: 'icon-128x128.png' })
+  statusbar.append(img)
+
+  let secs = 0;
+  show_secs_1(secs, stopwatch)
+
+  setInterval(() => {
+    let state = store.getState()
+    if(!state.started) return
+    secs++
+    show_secs_1(secs, stopwatch)
+  }, 1000)
+
+  function show_secs_1(secs, stopwatch) {
+    let h = Math.floor(secs / 3600)
+    secs = secs - h*3600
+    let m = Math.floor(secs / 60)
+    let s = secs - m*60
+
+    m = m < 10 ? '0' + m : m
+    s = s < 10 ? '0' + s : s
+
+    stopwatch.innerHTML = `${h}:${m}:${s}`
+  }
+}
+
 function showToolbar(store, state, oldstate, toolbar) {
   if(!state.schedule) toolbar.innerHTML = ""
+  if(!state.started) toolbar.classList.add('stopped')
+  else toolbar.classList.remove('stopped')
   if(state.schedule == oldstate.schedule) return
+
+  let left = div({ class: 'left' })
+  toolbar.appendChild(left)
+  let right = div({ class: 'right' })
+  toolbar.appendChild(right)
+
+  let cont = div( { class: 'btn-cont'} )
+  left.appendChild(cont)
+  update_btn_1()
+
+  let active = div({ class: 'active' })
+  let activeimg = h('img', { src: 'inactive.svg' })
+  active.appendChild(activeimg)
+  left.appendChild(active)
+
+  let ex = div({ class: 'current-exercise-txt' })
+  left.appendChild(ex)
+  update_ex_1()
+
+  let repOrTimer = div({ class: 'rep-or-timer' })
+  right.appendChild(repOrTimer)
+
+  let weight = div({ class: 'weight' })
+  right.appendChild(weight)
+
+
+  /*
 
   let cont = div( { class: 'btn-cont'} )
   toolbar.appendChild(cont)
@@ -150,8 +241,8 @@ function showToolbar(store, state, oldstate, toolbar) {
   let ex = div({ class: 'current-exercise' })
   toolbar.appendChild(ex)
   update_ex_1()
-  let timer = div({ class: 'timer' })
   toolbar.appendChild(timer)
+  */
 
   store.subscribe((state, oldstate) => {
     if(oldstate.started == state.started &&
@@ -159,18 +250,42 @@ function showToolbar(store, state, oldstate, toolbar) {
     update_btn_1()
     update_ex_1()
   })
+  store.subscribe((state, oldstate) => {
+    if(state.started == oldstate.started) return
+    update_active_1(state, oldstate)
+  })
 
   store.subscribe((state, oldstate) => {
     update_timer_1()
   })
 
+  function update_active_1(state) {
+    let src = state.started ? 'active.svg' : 'inactive.svg'
+    activeimg.src = src
+  }
+
   function update_ex_1() {
-    ex.innerHTML = ""
     let state = store.getState()
-    if(!state.selected) return
-    let txt = state.selected.getElementsByClassName('txt')
-    if(txt && txt.length) txt = txt[0].innerText
-    else txt = ""
+    if(state.selected >= state.schedule.length) return
+    let exercise = state.schedule[state.selected]
+    if(exercise) {
+      ex.innerHTML = exercise.txt
+      if(exercise.reps) {
+        repOrTimer.innerHTML = exercise.reps + ' reps'
+      } else if(exercise.time) {
+        repOrTimer.innerHTML = exercise.time
+      } else {
+        repOrTimer.innerHTML = ""
+      }
+      if(exercise.weight) {
+        weight.innerHTML = exercise.weight + ' kgs'
+      } else {
+        weight.innerHTML = ""
+      }
+    } else {
+      ex.innerHTML = ""
+    }
+    /*
     let reps = state.selected.getElementsByClassName('reps')
     if(reps && reps.length) reps = reps[0].innerText
     else reps = ""
@@ -180,6 +295,7 @@ function showToolbar(store, state, oldstate, toolbar) {
     ex.appendChild(div({ class: 'txt' }, txt))
     ex.appendChild(div({ class: 'reps' }, reps))
     ex.appendChild(div({ class: 'weight' }, weight))
+    */
   }
 
   function update_btn_1() {
@@ -193,7 +309,7 @@ function showToolbar(store, state, oldstate, toolbar) {
       class: "btn",
       onclick: start_1,
     }, "Start")
-    else if(state.selected.dataset.time) btn = div({
+    else if(state.schedule[state.selected].time) btn = div({
       class: "btn",
       onclick: () => store.dispatch({ type: 'stoptimer' })
     }, "Stop")
@@ -208,30 +324,27 @@ function showToolbar(store, state, oldstate, toolbar) {
   function next_1() {
     store.dispatch({ type: 'stoptimer' })
     let state = store.getState()
-    let e = getNextExercise(state.selected)
-    if(e) {
-      store.dispatch({ type: 'select', e })
+    let nxt = getNextExercise(state)
+    store.dispatch({ type: 'select', ndx: nxt })
+    if(nxt != -1) {
       store.dispatch({ type: 'startexercise' })
     } else {
-      store.dispatch({ type: 'select' })
       store.dispatch({ type: 'stoptimer' })
     }
   }
 
   function start_1() {
+    chime()
     let state = store.getState()
-    if(!state.selected) {
-      let first = document.getElementsByClassName("exercise")[0]
-      store.dispatch({ type: 'select', e: first })
+    if(state.selected == -1) {
+      store.dispatch({ type: 'select', ndx: getNextExercise(state) })
     }
     store.dispatch({ type: 'startexercise' })
   }
 
   function update_timer_1() {
-    timer.innerHTML = ""
-
     let state = store.getState()
-    if(state.timeleft) timer.innerHTML = tm_s_1(state.timeleft)
+    if(state.timeleft) repOrTimer.innerHTML = tm_s_1(state.timeleft)
   }
 
   function tm_s_1(tm) {
@@ -243,11 +356,13 @@ function showToolbar(store, state, oldstate, toolbar) {
   }
 }
 
-function getNextExercise(e) {
-  while(e) {
-    e = e.nextSibling
-    if(e.classList.contains("exercise")) return e
+function getNextExercise(state) {
+  let sel = state.selected ? state.selected : 0
+  for(let i = sel+1;i < state.schedule.length;i++) {
+    let curr = state.schedule[i]
+    if(curr.type == 'set') return i
   }
+  return -1
 }
 
 function showSchedule(store, state, oldstate, schedule) {
@@ -266,8 +381,7 @@ function showSchedule(store, state, oldstate, schedule) {
     else {
       let e = div({
         class: "exercise",
-        "data-time": exercise.time,
-        onclick: (evt) => store.dispatch({ type: 'select', e: find_line_1(evt.target) }),
+        onclick: (evt) => store.dispatch({ type: 'select', ndx: i }),
       })
       e.appendChild(h('span', { class: 'txt', html: exercise.txt}))
       if(exercise.time) {
@@ -279,22 +393,18 @@ function showSchedule(store, state, oldstate, schedule) {
       if(exercise.weight) {
         e.appendChild(h('span', { class: 'weight', html: exercise.weight + ' kgs' }))
       }
+      exercise.e = e
       schedule.appendChild(e)
     }
   }
-
-  function find_line_1(e) {
-    if(!e) return
-    if(e.classList.contains("exercise")) return e
-    else return find_line_1(e.parentNode)
-  }
-
 }
 
 function showSelected(store, state, oldstate) {
   if(oldstate.selected == state.selected) return
-  if(oldstate.selected) oldstate.selected.classList.remove('selected')
-  if(state.selected) state.selected.classList.add('selected')
+  let exercise = state.schedule[state.selected]
+  let old = oldstate.schedule[oldstate.selected]
+  if(old && old.e) old.e.classList.remove('selected')
+  if(exercise && exercise.e) exercise.e.classList.add('selected')
 }
 
 /*      outcome/
@@ -379,7 +489,7 @@ function loadSchedule(store) {
     let words = line.split(/ /g)
     let first = words.shift()
     let last = words.pop()
-    let exercise = {}
+    let exercise = { type: 'set' }
     if(first.indexOf(':') == -1) exercise.reps = first
     else exercise.time = first
     if(last.startsWith('x')) exercise.weight = last
@@ -400,10 +510,9 @@ function countDown(store) {
     if(!state.endtime) return
     let left = state.endtime - Date.now()
     if(left < 0) {
-      let e = getNextExercise(state.selected)
-      let a = document.getElementById('chime')
-      a.play()
-      store.dispatch({ type: 'timerdone', e})
+      let nxt = getNextExercise(state)
+      chime()
+      store.dispatch({ type: 'timerdone', ndx: nxt })
     } else {
       store.dispatch({ type: 'timeleft', left })
       setTimeout(() => step_1(store), 500)
@@ -411,3 +520,7 @@ function countDown(store) {
   }
 }
 
+function chime() {
+  let a = document.getElementById('chime')
+  a.play()
+}
