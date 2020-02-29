@@ -145,6 +145,13 @@ h2 {
   text-align: center;
 }
 
+.left > .exercise-pic {
+  width: 72px;
+  margin: 0 auto;
+  display: block;
+  margin-top: 8px;
+}
+
 .right > .rep-or-timer {
   width: 80%;
   margin: 10px auto;

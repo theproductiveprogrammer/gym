@@ -62,6 +62,7 @@ function gym_init(e) {
   STORE = createStore(reducer)
   show(STORE, e)
   loadSchedule(STORE)
+  loadPics(STORE)
 
   STORE.subscribe((state, oldstate) => {
     if(oldstate.endtime == state.endtime) return
@@ -71,6 +72,7 @@ function gym_init(e) {
 
 const initialState = {
   schedule: [],
+  pics: [],
   selected: -1,
   started: false,
   timeleft: 0,
@@ -83,7 +85,8 @@ function reducer(state, action) {
     case 'loaderr':
       return { ...state, schedule: null, status: action.status }
     case 'loaded':
-      return { ...state, schedule: action.schedule }
+      if(action.schedule) return { ...state, schedule: action.schedule }
+      else if(action.pics) return { ...state, pics: action.pics }
     case 'select':
       if(state.endtime) return state
       return { ...state, started: false, selected: action.ndx }
@@ -224,6 +227,8 @@ function showToolbar(store, state, oldstate, toolbar) {
 
   let ex = div({ class: 'current-exercise-txt' })
   left.appendChild(ex)
+  let pic = div({ class: 'exercise-pic' })
+  left.appendChild(pic)
   update_ex_1()
 
   let repOrTimer = div({ class: 'rep-or-timer' })
@@ -231,18 +236,6 @@ function showToolbar(store, state, oldstate, toolbar) {
 
   let weight = div({ class: 'weight' })
   right.appendChild(weight)
-
-
-  /*
-
-  let cont = div( { class: 'btn-cont'} )
-  toolbar.appendChild(cont)
-  update_btn_1()
-  let ex = div({ class: 'current-exercise' })
-  toolbar.appendChild(ex)
-  update_ex_1()
-  toolbar.appendChild(timer)
-  */
 
   store.subscribe((state, oldstate) => {
     if(oldstate.started == state.started &&
@@ -282,6 +275,9 @@ function showToolbar(store, state, oldstate, toolbar) {
       } else {
         weight.innerHTML = ""
       }
+      let src = findCurrentPic(state)
+      if(!src) pic.innerHTML = ""
+      else pic.innerHTML = `<img src="${src}">`
     } else {
       ex.innerHTML = ""
     }
@@ -520,7 +516,45 @@ function countDown(store) {
   }
 }
 
+function loadPics(store) {
+  ajaxGET('/pics.txt', (status, info) => {
+    if(status != 200) store.dispatch({ type: 'loaderr', status })
+    else store.dispatch({ type: 'loaded', pics: pics_1(info) })
+  })
+
+  function pics_1(info) {
+    return info.split(/[\n\r]/g).map(l => l.trim()).filter(l => l.trim())
+  }
+}
+
 function chime() {
   let a = document.getElementById('chime')
   a.play()
 }
+
+function findCurrentPic(state) {
+  let i = state.selected
+  if(i == -1) i = 0
+  let title
+  for(;i >=0;i--) {
+    let curr = state.schedule[i]
+    if(curr.type == 'title') {
+      title = curr.txt.toLowerCase()
+      break
+    }
+  }
+  if(title) {
+    for(let i = 0;i < state.pics.length;i++) {
+      if(title.startsWith(as_txt_1(state.pics[i]))) {
+        return state.pics[i]
+      }
+    }
+  }
+
+  function as_txt_1(p) {
+    p = p.replace(/\..*$/,'')
+    p = p.replace('-', ' ')
+    return p
+  }
+}
+

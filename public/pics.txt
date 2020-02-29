@@ -1,0 +1,5 @@
+calf-raise.svg
+deadlift.svg
+leg-press.svg
+pull-ups.svg
+warm-up.svg
