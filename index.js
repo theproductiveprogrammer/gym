@@ -1,4 +1,7 @@
 'use strict'
+const fs = require('fs')
+const path = require('path')
+
 const express = require('express')
 const app = express()
 
@@ -13,12 +16,14 @@ app.use(pino)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use('/some-request', (req, res) => {
+app.use('/edit', (req, res) => {
   let data = req.body
-  handle(data, err => {
+  const editfile = path.join(__dirname, 'edits.txt')
+  let line = `${data.ndx}: ${data.line}\n`
+  fs.appendFile(editfile, line, (err) => {
     if(err) {
       req.log.error(err)
-      res.status(err.code).send(err.msg)
+      res.status(500).send('Failed to save')
     } else {
       res.status(200).end()
     }

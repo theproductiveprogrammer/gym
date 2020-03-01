@@ -1,4 +1,5 @@
 .*
 out.log
+edits.txt
 node_modules/
 _tmp/

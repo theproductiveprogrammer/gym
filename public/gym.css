@@ -177,3 +177,12 @@ h2 {
   color: #6d6d6d;
 }
 
+.edit {
+  display: block;
+  width: 16px;
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+  opacity: 0.5;
+  cursor: pointer;
+}

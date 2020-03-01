@@ -103,6 +103,15 @@ function reducer(state, action) {
       state = { ...state, started: false }
       delete state.timeleft
       delete state.endtime
+      return state
+    case 'edited':
+      sendEdit(state.selected, action.line)
+      let newschedule = []
+      for(let i = 0;i < state.schedule.length;i++) {
+        if(i == state.selected) newschedule.push(parse(action.line))
+        else newschedule.push(state.schedule[i])
+      }
+      return { ...state, schedule: newschedule }
     default:
       return state
   }
@@ -216,6 +225,13 @@ function showToolbar(store, state, oldstate, toolbar) {
   let right = div({ class: 'right' })
   toolbar.appendChild(right)
 
+  let edit = h('img', {
+    class: 'edit',
+    src: 'edit.svg',
+    onclick: () => editCurrent(store),
+  })
+  right.appendChild(edit)
+
   let cont = div( { class: 'btn-cont'} )
   left.appendChild(cont)
   update_btn_1()
@@ -225,20 +241,21 @@ function showToolbar(store, state, oldstate, toolbar) {
   active.appendChild(activeimg)
   left.appendChild(active)
 
-  let ex = div({ class: 'current-exercise-txt' })
-  left.appendChild(ex)
-  let pic = div({ class: 'exercise-pic' })
-  left.appendChild(pic)
-  update_ex_1()
-
   let repOrTimer = div({ class: 'rep-or-timer' })
   right.appendChild(repOrTimer)
 
   let weight = div({ class: 'weight' })
   right.appendChild(weight)
 
+  let ex = div({ class: 'current-exercise-txt' })
+  left.appendChild(ex)
+  let pic = div({ class: 'exercise-pic' })
+  left.appendChild(pic)
+  update_ex_1()
+
   store.subscribe((state, oldstate) => {
-    if(oldstate.started == state.started &&
+    if(oldstate.schedule == state.schedule &&
+        oldstate.started == state.started &&
         oldstate.selected == state.selected) return
     update_btn_1()
     update_ex_1()
@@ -424,18 +441,7 @@ function ajaxPOST(url_, data, cb) {
     let xhr = new XMLHttpRequest()
     xhr.onreadystatechange = function() {
         if(xhr.readyState !== XMLHttpRequest.DONE) return
-        if(xhr.responseText) {
-            try {
-                let resp = JSON.parse(xhr.responseText)
-                cb(xhr.status, resp)
-            } catch(e) {
-                let resp = { status: xhr.status, responseText: xhr.responseText }
-                console.error(e)
-                cb(0, resp)
-            }
-        } else {
-            cb(0, {})
-        }
+        cb(xhr.status, xhr.responseText)
     }
 
     xhr.open('POST', url_)
@@ -472,27 +478,28 @@ function loadSchedule(store) {
         type: 'title',
         txt: line.replace('#', '').trim()
       })
-      else schedule.push(exercise_1(line))
+      else schedule.push(parse(line))
     }
     return schedule
   }
 
-  /*    outcome/
-   * Split the line into words and recognize time, reps, and weights,
-   * putting the rest as the exercise text.
-   */
-  function exercise_1(line) {
-    let words = line.split(/ /g)
-    let first = words.shift()
-    let last = words.pop()
-    let exercise = { type: 'set' }
-    if(first.indexOf(':') == -1) exercise.reps = first
-    else exercise.time = first
-    if(last.startsWith('x')) exercise.weight = last
-    else words.push(last)
-    exercise.txt = words.join(' ')
-    return exercise
-  }
+}
+
+/*    outcome/
+ * Split the line into words and recognize time, reps, and weights,
+ * putting the rest as the exercise text.
+ */
+function parse(line) {
+  let words = line.split(/ /g)
+  let first = words.shift()
+  let last = words.pop()
+  let exercise = { type: 'set', line }
+  if(first.indexOf(':') == -1) exercise.reps = first
+  else exercise.time = first
+  if(last.startsWith('x')) exercise.weight = last
+  else words.push(last)
+  exercise.txt = words.join(' ')
+  return exercise
 }
 
 function countDown(store) {
@@ -558,3 +565,18 @@ function findCurrentPic(state) {
   }
 }
 
+function editCurrent(store) {
+  let state = store.getState()
+  if(state.endtime) return
+  let exercise = state.schedule[state.selected]
+  if(!exercise) return
+  let line = prompt(exercise.line, exercise.line)
+  if(!line || line == exercise.line) return
+  store.dispatch({ type: 'edited', line })
+}
+
+function sendEdit(ndx, line) {
+  ajaxPOST('/edit', { ndx, line }, (status, msg) => {
+    console.log(status, msg)
+  })
+}
