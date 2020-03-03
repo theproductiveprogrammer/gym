@@ -142,13 +142,10 @@ function show(store, e) {
   e.appendChild(err)
 
   showStatusbar(store, statusbar)
+  setupToolbar(store, toolbar)
 
   store.subscribe((state, oldstate) => {
     showTitlebar(store, state, oldstate, titlebar)
-  })
-
-  store.subscribe((state, oldstate) => {
-    showToolbar(store, state, oldstate, toolbar)
   })
 
   store.subscribe((state, oldstate) => {
@@ -214,11 +211,7 @@ function showStatusbar(store, statusbar) {
   }
 }
 
-function showToolbar(store, state, oldstate, toolbar) {
-  if(!state.schedule) toolbar.innerHTML = ""
-  if(!state.started) toolbar.classList.add('stopped')
-  else toolbar.classList.remove('stopped')
-  if(state.schedule == oldstate.schedule) return
+function setupToolbar(store, toolbar) {
 
   let left = div({ class: 'left' })
   toolbar.appendChild(left)
@@ -270,6 +263,8 @@ function showToolbar(store, state, oldstate, toolbar) {
   })
 
   function update_active_1(state) {
+    if(!state.started) toolbar.classList.add('stopped')
+    else toolbar.classList.remove('stopped')
     let src = state.started ? 'active.svg' : 'inactive.svg'
     activeimg.src = src
   }
