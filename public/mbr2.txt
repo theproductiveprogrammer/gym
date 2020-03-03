@@ -1,0 +1,236 @@
+-- Workout Day 2
+# Warm Up
+2:45 Jumping Jacks
+0:15 Rest
+2:45 Touch Heel Walk
+0:15 Rest
+2:45 Skipping
+0:15 Rest
+2:45 Knee Rotation
+0:15 Rest
+2:45 Waist Rotation
+0:15 Rest
+1:30 Pendulum Squat (L)
+0:15 Rest
+1:30 Pendulum Squat (R)
+0:15 Rest
+2:45 Butt Kick
+
+5:00 Setup Mat
+
+# L-Sit
+00:14 L-Sit
+00:51 Rest
+00:14 L-Sit
+00:51 Rest
+00:14 L-Sit
+00:51 Rest
+00:14 L-Sit
+00:51 Rest
+00:14 L-Sit
+
+03:00 Rest
+
+# Hand-Stand
+3 Wall Walk
+1:30 Rest
+3 Kickups to Wall (L)
+0:30 Rest
+3 Kickups to Wall (R)
+3 Wall Walk
+1:30 Rest
+3 Kickups to Wall (L)
+0:30 Rest
+3 Kickups to Wall (R)
+
+# Front Lever
+00:20 Tucked Front Lever
+01:06 Rest
+00:20 Tucked Front Lever
+01:06 Rest
+00:20 Tucked Front Lever
+01:06 Rest
+00:20 Tucked Front Lever
+01:06 Rest
+00:20 Tucked Front Lever
+01:06 Rest
+
+
+# Deadlift Warm Up
+15 Deadlift x0
+15 Deadlift x10
+15 Deadlift x20
+6 Deadlift x50
+4 Deadlift x60
+# Deadlift
+6 Deadlift x55
+3:00 Rest
+6 Deadlift x55
+3:00 Rest
+6 Deadlift x55
+3:00 Rest
+# Deadlift Tricon
+0:10 Deadlift Explode x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+3:00 Rest
+0:10 Deadlift Explode x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+3:00 Rest
+0:10 Deadlift Explode x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Hold x15
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+0:10 Deadlift Up
+0:10 Deadlift Down
+
+5:00 Setup
+
+# Leg Press Warmup
+15 Leg Press x20
+15 Leg Press x40
+6 Leg Press x100
+4 Leg Press x120
+# Leg Press
+10 Leg Press x100
+3:00 Rest
+10 Leg Press x100
+3:00 Rest
+10 Leg Press x100
+3:00 Rest
+# Leg Press Tricon
+0:10 Leg Press Explode x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+3:00 Rest
+0:10 Leg Press Explode x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+3:00 Rest
+0:10 Leg Press Explode x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Hold x40
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+0:10 Leg Press Up
+0:10 Leg Press Down
+
+5:00 Setup
+
+# Calf Raises Warmup
+15 Calf Raises x20
+15 Calf Raises x40
+6 Calf Raises x70
+4 Calf Raises x100
+# Calf Raises
+10 Calf Raises x70
+1:00 Rest
+10 Calf Raises x70
+1:00 Rest
+10 Calf Raises x70
+1:00 Rest
+# Calf Raises Tricon
+0:10 Calf Raises Explode x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+3:00 Rest
+0:10 Calf Raises Explode x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+3:00 Rest
+0:10 Calf Raises Explode x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Hold x40
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+0:10 Calf Raises Up
+0:10 Calf Raises Down
+
+5:00 Setup
+
+# Face Pulls / Neck Raise Circuit
+15 Face Pulls x25
+10 Neck Raise x15
+00:30 Rest
+15 Face Pulls x30
+10 Neck Raise x15
+00:30 Rest
+15 Face Pulls x30
+10 Neck Raise x15
+
+3:00 Setup (box)
+
+# Wrist
+15 Dumbell Wrist Curl x5
+00:10 Setup (Lower Seat)
+15 Supernated Dumbell Wrist Curls x5
+15 Neutral Grip Wrist Curls (UP) x5
+15 Neutral Grip Wrist Curls (DOWN) x5
+15 Neutral Grip Wrist Curls (TWISTING) x5
+15 Bent Arm Twist (Towards Chest) x5
+15 Bent Arm Twist (Straight Out) x5
+15 Bent Arm Twist (Side out of body) x5
+15 Barbell Wrist Rolls
+15 Barbell Wrist Rolls (Behind Back)
+00:30 Barbell Hangs
+
+# Bicep/Tricep Circuit
+20 Bicep Curls x4
+20 Tricep Overhead x8
+25 Bicep Curls x6
+25 Tricep Overhead x12
+20 Bicep Curls x10
+20 Tricep Overhead x18
