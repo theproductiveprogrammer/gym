@@ -275,8 +275,10 @@ function setupToolbar(store, toolbar) {
     let exercise = state.schedule[state.selected]
     if(exercise) {
       ex.innerHTML = exercise.txt
+      repOrTimer.classList.remove('-rep', '-weight')
       if(exercise.reps) {
         repOrTimer.innerHTML = exercise.reps + ' reps'
+        repOrTimer.classList.add('-rep')
       } else if(exercise.time) {
         repOrTimer.innerHTML = exercise.time
       } else {
@@ -284,6 +286,7 @@ function setupToolbar(store, toolbar) {
       }
       if(exercise.weight) {
         weight.innerHTML = exercise.weight + ' kgs'
+        repOrTimer.classList.add('-weight')
       } else {
         weight.innerHTML = ""
       }

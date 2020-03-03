@@ -154,10 +154,18 @@ h2 {
 
 .right > .rep-or-timer {
   width: 80%;
-  margin: 10px auto;
+  margin: 64px auto;
+  margin-bottom: 0;
   color: #443c14;
   text-align: center;
-  font-size: 2em;
+  font-size: 4em;
+}
+
+.right > .rep-or-timer.-rep {
+  font-size: 3em;
+}
+.right > .rep-or-timer.-weight {
+  margin-top: 32px;
 }
 
 .right > .weight {
